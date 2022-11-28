@@ -12,11 +12,11 @@ setInterval(defineTimeBlocks, 60000);
 
 $(".time-block").each(function() {
     var blockId = $(this).attr("id");
-    //Gets data from local storage
-    $("#" + blockId + " textarea").text(localStorage.getItem(dayjs().format("DDDYYYY") + blockId));
+    //set data to local storage
+    $("#" + blockId + "textarea").text(localStorage.setItem("textarea" + blockId));
   });
 
-    $(".SaveBtn").on('click', clickSave)
+    $(".SaveBtn").on('save', clickSave)
     }
 
     function defineTimeBlocks(){
@@ -40,7 +40,7 @@ $(".time-block").each(function() {
         })
     }
 
-    //set data in the local storage
+    //get data from the local storage
     function clickSave() {
-        $('#' + blockId + " textarea").text(localStorage.setItem(dayjs().format("DDDYYYY") + blockId));
+        $('#' + blockId + " textarea").text(localStorage.getItem("textarea" + blockId));
     }
