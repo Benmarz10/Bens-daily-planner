@@ -57,3 +57,18 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
+
+  .lead {
+    text-align: center;
+
+  }
+
+  .display-3 {
+    text-align: center;
+  }
+
+  .date {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
