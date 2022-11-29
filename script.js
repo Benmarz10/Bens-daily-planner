@@ -6,7 +6,7 @@ function init() {
 //dayjs for current date
 $('#currentDay').text(today.format('MMM D, YYYY'));
 
-//this sets the color coding for each block and puts it on an interval to change every minute
+//set the color coding for each block and put it on an interval to change every minute
 defineTimeBlocks();
 setInterval(defineTimeBlocks, 60000);
 
@@ -37,4 +37,3 @@ setInterval(defineTimeBlocks, 60000);
         })
     }
 
-    //get data from the local storage
