@@ -10,13 +10,10 @@ $('#currentDay').text(today.format('MMM D, YYYY'));
 defineTimeBlocks();
 setInterval(defineTimeBlocks, 60000);
 
-$(".time-block").each(function() {
-    var blockId = $(this).attr("id");
-    //set data to local storage
-    $("#" + blockId + "textarea").text(localStorage.setItem("textarea" + blockId));
-  });
+//set local storage data
 
-    $(".SaveBtn").on('save', clickSave)
+//event listnener for clicking save btn
+    $("SaveBtn").on('click', clickSave)
     }
 
     function defineTimeBlocks(){
@@ -41,6 +38,3 @@ $(".time-block").each(function() {
     }
 
     //get data from the local storage
-    function clickSave() {
-        $('#' + blockId + " textarea").text(localStorage.getItem("textarea" + blockId));
-    }
